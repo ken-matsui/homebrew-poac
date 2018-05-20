@@ -1,0 +1,26 @@
+version: 2
+jobs:
+  install:
+    steps:
+      - checkout
+      - run:
+          name: copy formula
+          command: \cp -f poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
+      - run:
+          name: update homebrew
+          command: brew update
+      - run:
+          name: install poac
+          command: brew install poac --verbose
+  test:
+    steps:
+      - run:
+          name: audit poac
+          command: brew audit poac --strict
+      - run:
+          name: test poac
+          command: brew test poac
+      - run:
+          name: print poac version
+          command: poac --version
+
