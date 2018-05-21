@@ -1,6 +1,8 @@
 version: 2
 jobs:
   build_and_test:
+    macos:
+      xcode: "9.3.0"
     steps:
       - checkout
       - run: \cp -f poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
