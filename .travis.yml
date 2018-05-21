@@ -1,0 +1,14 @@
+language: objective-c
+rvm: system
+before_install:
+  - brew update
+install:
+  - \cp -f poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
+script:
+  - brew install poac --verbose
+  - brew audit poac --strict
+  - brew test poac
+  - poac --version
+matrix:
+  fast_finish: true
+
