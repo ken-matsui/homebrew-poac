@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  build_and_test:
     steps:
       - checkout
       - run: \cp -f poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
