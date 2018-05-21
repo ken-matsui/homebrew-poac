@@ -11,4 +11,8 @@ jobs:
       - run: brew audit poac --strict
       - run: brew test poac
       - run: poac --version
-
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build_and_test
