@@ -5,8 +5,8 @@ before_install:
 install:
   - \cp -f poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
 script:
-  - brew install poac --verbose
-  - brew audit poac --strict
+  - brew install --verbose --debug poac
+  - brew audit --strict poac
   - brew test poac
   - poac --version
 matrix:
