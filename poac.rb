@@ -1,13 +1,16 @@
 class Poac < Formula
-  desc "Package manager for C++."
-  homepage "https://poac.pm"
+  desc "Package manager for C++"
+  homepage "https://github.com/poacpm"
   url "https://github.com/poacpm/poac.git",
-      :tag => "v0.0.1"
-      :revision => ""
-  head "https://github.com/poacpm/poac.git"
+      :tag => "0.0.1-beta",
+      :revision => "16d42cf3529995689fda12b2f16f1fae20ea23d5"
+
 
   depends_on "cmake" => :build
   depends_on "boost"
+  depends_on "curl"
+  depends_on "openssl"
+  depends_on "yaml-cpp"
 
   def install
     mkdir "bulid" do
@@ -15,10 +18,8 @@ class Poac < Formula
       system "make", "install"
     end
 
-    bash_completion.install "completions/poac.bash" => "poac"
-    zsh_completion.install "completions/poac.zsh" => "_poac"
-
     man1.install Dir["docs/man/man1/*.1"]
+    bash_completion.install "docs/comp/poac.bash" => "poac"
   end
 
   test do
