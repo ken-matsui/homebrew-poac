@@ -9,7 +9,7 @@ class Poac < Formula
   depends_on "boost"
   depends_on "libressl"
   depends_on "yaml-cpp"
-  depends_on "cvc4"
+  depends_on "cvc4/cvc4/cvc4"
 
   def install
     mkdir "bulid" do
