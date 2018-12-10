@@ -12,4 +12,5 @@ script:
   - poac --version
 matrix:
   fast_finish: true
-
+notifications:
+  slack: poacpm:VNE7FkuxYAghHHrEfKaj2V19
