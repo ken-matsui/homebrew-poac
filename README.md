@@ -1,5 +1,5 @@
 # homebrew-poac
-[![Build Status](https://travis-ci.org/poacpm/homebrew-poac.svg?branch=master)](https://travis-ci.org/poacpm/homebrew-poac)
+[![Build Status](https://travis-ci.com/poacpm/homebrew-poac.svg?branch=master)](https://travis-ci.com/poacpm/homebrew-poac)
 
 ## Install
 ```bash
