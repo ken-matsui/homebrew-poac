@@ -1,15 +1,18 @@
 language: objective-c
 rvm: system
 before_install:
-  - brew update
+- brew update
 install:
-  - \cp -f poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
+- \cp -f poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
 script:
-  - brew tests
-  - brew install --build-from-source poac
-  - brew test poac
-  - brew audit --strict poac
-  - poac --version
+- brew tests
+- brew install --build-from-source poac
+- brew test poac
+- brew audit --strict poac
+- poac --version
 matrix:
   fast_finish: true
-
+notifications:
+  email: false
+  slack:
+    secure: AF+K3qRHw29jY7hiLVHrnZpo0Z+sV/pL9TSfyTSx4rrpdCJ2PM9wsKvAqALR92xwh/Q65GIFfrrKEKrj3FP0/WOqcoPYC7hg5Vv/GY5mwSr44Dgzu6nm//hedKs2o2gMVDEX50aK6w1bk8pWpCi5af5PyvFi1DMcOECaTn573or3TvT0jm+dlHzQiPzWL3OvJ+pLnHwyhtVvf860fU2mcdXRICZaAZpWyccCL6WRSiu4JY1iP7YpJ+Vw6Xr8hrT3LOR3W214oslJggTTZDSSdRBonw3fyq/c4LaSCOppN/LAlnLtPOq7Hfi9Axb8JTDgJSWKTPNAsjUycu4QVkCthkY5460QcnWUUZQxaB9DXVmIpiarsM5fIyO2vgiRYVWWfGMa//AIy8RYMVrxlxdGoDxxDgs1ShQg1zX4CXX9je5VLHvexMOl+UVIlzzRXHtG6C1j4f3G2yUpvKyN+7sXweX8itGNvG2x/MGx6xRSD9MeOGSg8ffHoPAj/8REdHgI6LRNhjQaOMEI9vl/sdAFeLWi/dl8lb73sx15wc1f1FpIFJ9I89GtoBySp9MBwUs2EmQ0yLnQaDx7Q4oXRfO99gz3l1XA/NSG8wfM44rWa4Y0OhAF5CVb65612OWFWtVOvoKOUeGeab2jH3JbXNgmyegmxIqKyRk4jpJ5oKPl8ds=
