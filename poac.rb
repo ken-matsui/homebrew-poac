@@ -1,5 +1,5 @@
 class Poac < Formula
-  desc "Package manager for C/C++"
+  desc "Package manager for C++"
   homepage "https://github.com/poacpm"
   url "https://github.com/poacpm/poac.git",
       :tag      => "0.3.0-beta",
