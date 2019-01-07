@@ -17,7 +17,9 @@ class Poac < Formula
     end
 
     man1.install Dir["docs/man/man1/*.1"]
+    cp "docs/comp/poac.bash", "docs/comp/poac.zsh"
     bash_completion.install "docs/comp/poac.bash" => "poac"
+    zsh_completion.install "docs/comp/poac.zsh" => "_poac"
   end
 
   test do
