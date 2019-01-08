@@ -7,11 +7,20 @@ class Poac < Formula
 
   depends_on "cmake" => :build
   depends_on "boost"
+  depends_on "llvm" if MacOS.version <= :sierra
+  depends_on :macos => :sierra
   depends_on "yaml-cpp"
 
   def install
+    envs = []
+    if MacOS.version <= :sierra
+      envs << "CXX=/usr/local/opt/llvm/bin/clang++"
+      envs << "LDFLAGS=-L/usr/local/opt/llvm/lib"
+      envs << "CPPFLAGS=-I/usr/local/opt/llvm/include"
+    end
+
     mkdir "bulid" do
-      system "cmake", "..", *std_cmake_args
+      system *envs, "cmake", "..", *std_cmake_args
       system "make", "install"
     end
 
