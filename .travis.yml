@@ -5,7 +5,6 @@ before_install:
 install:
 - \cp -f poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
 script:
-- brew tests
 - brew install --build-from-source poac
 - brew test poac
 - brew audit --strict poac
@@ -16,4 +15,3 @@ notifications:
   email: false
   slack:
     secure: cM3q4VLlq4bkvhet6be/hyfxgUdwsIcPcdtWI+FFllVK92LE7nug5Vw5t3H1Snb/aYgDemQK9iLOVxau40qgMipu5VsBPr+GNZhwPp6ka+F4WfpAA5qCzNHCQuMLkQYDc9zwAU6c6E5aw/RewPgb7s7LpI/g02wisu3k7NIFsr7LKvUf75lT+sWDbUpLHNQj1b4YFO0/1oTJgwuXyffrzwikjivjBQHMrJSkoGNWLfZN0S5K/1maxixw6m8plgB4nR3CFC4UUOuMLWEZcJCURIN7Pc/I+oxL1ac7FRgzJPNCNHKehZsux9oZ1+02ef1AmeYE00VscuPr1UbbUgY3qA9SOIL+q/7KPElg3F/S4BwlFHoxWziIAJTQI93EKUsIt2I9zHdhm3KSslNs1nKMVE0oUaO4gRYFtyUWReuux7/yR4rD3WzLcybdr0O1ISgeWWO2QeLmb3mkYL18IxtBH7irI01iXLc3RFlIjU78SA3lOjgh9bB8Hp00Di3rjMbfJYNjQ+0ZcfqjzyTmlTPsqz6y7b3yIFVKhWA79QvZwfyK5ZfX5v9ksE8OKD2RyPEM4M6XC6eXPC86VjKe9/xgxzjtrW3FlDsAb/GR76dM5Y76A7rBDGrVS+WjUSDm+iAFSa5JUpRMXRRXchXAUa5ygTWIyEsMz6isDju4zcY+YCE=
-
