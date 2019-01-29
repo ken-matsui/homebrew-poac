@@ -1,5 +1,5 @@
 language: objective-c
-rvm: system
+rvm: 2.3
 
 matrix:
   fast_finish: true
