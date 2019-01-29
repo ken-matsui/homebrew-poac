@@ -3,24 +3,18 @@ class Poac < Formula
   homepage "https://github.com/poacpm"
   url "https://github.com/poacpm/poac.git",
       :tag      => "0.1.0",
-      :revision => "d1de19048e688db8f2afcca5dd5825fceb0f64bf"
+      :revision => "bc8e20f8d7b840b848489497c191818983d51f7c"
 
   depends_on "cmake" => :build
   depends_on "boost"
   depends_on "llvm" if MacOS.version <= :high_sierra
   depends_on :macos => :sierra
+  depends_on "openssl"
   depends_on "yaml-cpp"
 
   def install
-    envs = []
-    if MacOS.version <= :high_sierra
-      envs << "CXX=/usr/local/opt/llvm/bin/clang++"
-      envs << "LDFLAGS=-L/usr/local/opt/llvm/lib -L/usr/local/opt/openssl/lib"
-      envs << "CPPFLAGS=-I/usr/local/opt/llvm/include -I/usr/local/opt/openssl/include"
-    end
-
     mkdir "bulid" do
-      system *envs, "cmake", "..", *std_cmake_args
+      system "cmake", "..", *std_cmake_args
       system "make", "install"
     end
 
