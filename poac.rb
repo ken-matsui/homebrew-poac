@@ -2,8 +2,8 @@ class Poac < Formula
   desc "Package manager for C++"
   homepage "https://github.com/poacpm"
   url "https://github.com/poacpm/poac.git",
-      :tag      => "0.1.0",
-      :revision => "bc8e20f8d7b840b848489497c191818983d51f7c"
+      :tag      => "0.1.1",
+      :revision => "da7744181044fb66889c5204d679f743dd92dc87"
 
   depends_on "cmake" => :build
   depends_on "boost"
