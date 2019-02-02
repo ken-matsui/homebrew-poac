@@ -3,7 +3,7 @@ class Poac < Formula
   homepage "https://github.com/poacpm"
   url "https://github.com/poacpm/poac.git",
       :tag      => "0.1.1",
-      :revision => "da7744181044fb66889c5204d679f743dd92dc87"
+      :revision => "0bb4ff3393e503f963b19d294d6c7975e7034734"
 
   depends_on "cmake" => :build
   depends_on "boost"
