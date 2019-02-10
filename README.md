@@ -8,9 +8,9 @@ $ poac --help
 ```
 
 ## Future
-* < 30 forks
-* < 30 watchers
-* < 75 stars
+* > 30 forks
+* > 30 watchers
+* > 75 stars
 
 When the above conditions are satisfied, tap becomes unnecessary.
 
