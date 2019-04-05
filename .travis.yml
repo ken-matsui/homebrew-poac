@@ -10,6 +10,9 @@ matrix:
     # macOS High Sierra
     - os: osx
       osx_image: xcode10.1
+    # macOS Mojave
+    - os: osx
+      osx_image: xcode10.2
 
 before_install:
   - brew update
