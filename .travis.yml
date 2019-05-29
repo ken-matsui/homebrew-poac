@@ -17,7 +17,7 @@ matrix:
 before_install:
   - brew update
 install:
-  - ls /usr/local/opt/openssl/include
+  - ls -a /usr/local/opt/openssl/include/openssl
   - \cp -f poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
   - brew install --build-from-source poac
 script:
