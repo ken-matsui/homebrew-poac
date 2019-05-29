@@ -9,6 +9,7 @@ class Poac < Formula
   depends_on "boost"
   depends_on "llvm@7" if MacOS.version <= :high_sierra
   depends_on :macos => :sierra
+  depends_on "openssl" if MacOS.version >= :mojave
   depends_on "yaml-cpp"
 
   def install
