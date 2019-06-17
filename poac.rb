@@ -27,10 +27,10 @@ class Poac < Formula
   test do
     assert_match /Usage/, shell_output("#{bin}/poac --help")
 
-    system "#{bin}/poac", "new", "testpj"
-    assert_predicate testpj/"poac.yml", :exist?
+    system "#{bin}/poac", "new", "testpath"
+    assert_predicate testpath/"poac.yml", :exist?
 
-    cd "testpj" do
+    cd "testpath" do
       assert_match /Hello, world!/, shell_output("#{bin}/poac run")
     end
   end
