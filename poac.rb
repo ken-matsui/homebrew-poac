@@ -18,10 +18,10 @@ class Poac < Formula
       system "make", "install"
     end
 
-    man1.install Dir["docs/man/man1/*.1"]
-    cp "docs/comp/poac.bash", "docs/comp/poac.zsh"
-    bash_completion.install "docs/comp/poac.bash" => "poac"
-    zsh_completion.install "docs/comp/poac.zsh" => "_poac"
+    man1.install Dir["etc/man/man1/*.1"]
+    cp "etc/poac.bash", "etc/poac.zsh"
+    bash_completion.install "etc/poac.bash" => "poac"
+    zsh_completion.install "etc/poac.zsh" => "_poac"
   end
 
   test do
