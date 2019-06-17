@@ -29,7 +29,7 @@ class Poac < Formula
 
     cd testpath do
       system "#{bin}/poac", "new", "testpj"
-      assert_predicate "testpj", :exist?
+      assert_predicate testpath/"testpj", :exist?
 
       cd "testpj" do
         assert_match /Hello, world!/, shell_output("#{bin}/poac run")
