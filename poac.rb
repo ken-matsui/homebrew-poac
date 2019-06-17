@@ -29,8 +29,8 @@ class Poac < Formula
 
     cd testpath do
       system "#{bin}/poac", "new", "testpj"
-      assert_predicate "testpj/poac.yml", :exist?
-      
+      assert_predicate "testpj", :exist?
+
       cd "testpj" do
         assert_match /Hello, world!/, shell_output("#{bin}/poac run")
       end
