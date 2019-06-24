@@ -5,9 +5,9 @@ class Poac < Formula
       :tag      => "0.2.1",
       :revision => "353368f90544bb160b258a9cc1ecba8d467c4020"
 
-  depends_on "cmake" => :build if MacOS.version <= :sierra
+  depends_on "cmake" => :build
   depends_on "boost"
-  depends_on "llvm@7" if MacOS.version <= :high_sierra
+  depends_on "llvm@7" => :build if MacOS.version <= :high_sierra
   depends_on :macos => :sierra
   depends_on "openssl" if MacOS.version >= :mojave
   depends_on "yaml-cpp"
