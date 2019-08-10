@@ -10,7 +10,8 @@ class Poac < Formula
   depends_on "llvm@7" => :build if MacOS.version <= :high_sierra
   depends_on :macos => :sierra
   depends_on "openssl" if MacOS.version >= :mojave
-  depends_on "yaml-cpp"
+  depends_on "libgit2"
+  depends_on "matken11235/toml11/toml11"
 
   def install
     mkdir "build" do
