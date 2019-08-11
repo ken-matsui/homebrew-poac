@@ -17,8 +17,9 @@ matrix:
 before_install:
   - brew update
 install:
-  - \cp -f poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
-  - brew install --build-from-source --HEAD poac
+  #- \cp -f poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
+  #- brew install --build-from-source poac
+  - brew install --HEAD poacpm/poac/poac
 script:
   - brew test poac
   - brew audit --strict poac
