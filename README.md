@@ -1,13 +1,12 @@
-# homebrew-poac
-[![Build Status](https://travis-ci.com/poacpm/homebrew-poac.svg?branch=master)](https://travis-ci.com/poacpm/homebrew-poac)
+# homebrew-poac [![Build Status](https://travis-ci.com/poacpm/homebrew-poac.svg?branch=master)](https://travis-ci.com/poacpm/homebrew-poac)
 
-## Install
+## Installation
 ```bash
 $ brew install poacpm/poac/poac
 $ poac --help
 ```
 
-## Contribute
+## Contribution
 ```bash
 $ git clone $THIS_REPO
 $ cd homebrew-poac
