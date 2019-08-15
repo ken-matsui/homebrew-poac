@@ -1,9 +1,7 @@
 class Poac < Formula
   desc "Package manager for C++"
   homepage "https://github.com/poacpm"
-  url "https://github.com/poacpm/poac.git",
-      :tag      => "0.2.1",
-      :revision => "353368f90544bb160b258a9cc1ecba8d467c4020"
+  url "https://github.com/poacpm/poac.git", :tag => "0.2.1"
 
   depends_on "cmake" => :build
   depends_on "boost"
@@ -27,5 +25,14 @@ class Poac < Formula
 
   test do
     assert_match /Usage/, shell_output("#{bin}/poac --help")
+
+    cd testpath do
+      system "#{bin}/poac", "new", "testpj"
+      assert_predicate testpath/"testpj", :exist?
+
+      cd "testpj" do
+        assert_match /Hello, world!/, shell_output("#{bin}/poac run")
+      end
+    end
   end
 end

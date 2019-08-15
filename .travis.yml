@@ -1,6 +1,12 @@
 language: objective-c
 rvm: 2.3
 
+before_cache:
+  - brew cleanup
+cache:
+  directories:
+    - $HOME/Library/Caches/Homebrew
+
 matrix:
   fast_finish: true
   include:
@@ -12,7 +18,7 @@ matrix:
       osx_image: xcode10.1
     # macOS Mojave
     - os: osx
-      osx_image: xcode10.2
+      osx_image: xcode11
 
 before_install:
   - brew update
