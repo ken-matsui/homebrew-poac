@@ -4,12 +4,12 @@ rvm: 2.3
 matrix:
   fast_finish: true
   include:
-    # macOS Sierra
-    - os: osx
-      osx_image: xcode9.2
     # macOS High Sierra
     - os: osx
       osx_image: xcode10.1
+    # macOS Mojave
+    - os: osx
+      osx_image: xcode11.2
 
 before_install:
   - brew update
