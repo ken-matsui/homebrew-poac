@@ -19,7 +19,7 @@ jobs:
       if: always()
       with:
         type: ${{ job.status }}
-        job_name: '*Homebrew build*'
+        job_name: '*${{ github.workflow }} build*'
         url: ${{ secrets.SLACK_WEBHOOK }}
         username: 'GitHub Action (${{ github.workflow }})'
         commit: true
