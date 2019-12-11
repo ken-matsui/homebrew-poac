@@ -1,5 +1,4 @@
-# homebrew-poac
-[![Build Status](https://travis-ci.com/poacpm/homebrew-poac.svg?branch=master)](https://travis-ci.com/poacpm/homebrew-poac)
+# homebrew-poac [![GitHub Actions Homebrew](https://github.com/poacpm/homebrew-poac/workflows/Homebrew/badge.svg?branch=master)](https://github.com/poacpm/homebrew-poac/actions?query=workflow%3A%22Homebrew%22)
 
 ## Install
 ```bash
@@ -31,4 +30,3 @@ $ brew audit --strict poac
 
 $ brew bump-formula-pr  # Update command
 ```
-
