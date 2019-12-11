@@ -1,0 +1,15 @@
+name: Homebrew
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v1
+    - run: brew update
+    - run: \cp -f poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
+    - run: brew install --build-from-source poac
+    - run: brew test poac
+    - run: brew audit --strict poac
+    - run: poac --version
