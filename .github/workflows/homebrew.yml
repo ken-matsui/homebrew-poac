@@ -13,3 +13,14 @@ jobs:
     - run: brew test poac
     - run: brew audit --strict poac
     - run: poac --version
+    
+    - name: Slack Notification
+      uses: homoluctus/slatify@master
+      if: always()
+      with:
+        type: ${{ job.status }}
+        job_name: '*Homebrew build*'
+        url: ${{ secrets.SLACK_WEBHOOK }}
+        username: 'GitHub Action (${{ github.workflow }})'
+        commit: true
+        token: ${{ secrets.GITHUB_TOKEN }}
