@@ -1,10 +1,10 @@
-# homebrew-poac
+# homebrew-tap
 
-[![GitHub Actions Homebrew](https://github.com/poacpm/homebrew-poac/workflows/Homebrew/badge.svg?branch=master)](https://github.com/poacpm/homebrew-poac/actions?query=workflow%3A%22Homebrew%22)
+[![GitHub Actions Homebrew](https://github.com/poacpm/homebrew-tap/workflows/Homebrew/badge.svg?branch=master)](https://github.com/poacpm/homebrew-tap/actions?query=workflow%3A%22Homebrew%22)
 
 ## Install
 ```bash
-$ brew install poacpm/poac/poac
+$ brew install poacpm/tap/poac
 $ poac --help
 ```
 
@@ -20,10 +20,10 @@ Please refer to [this PR](https://github.com/Homebrew/homebrew-core/pull/31860) 
 
 ## Contribute
 ```bash
-$ git clone $THIS_REPO
-$ cd homebrew-poac
+$ git clone git@github.com:poacpm/homebrew-tap.git
+$ cd homebrew-tap
 #Invalidate ALIAS(alias cp='cp -i')
-$ \cp -f poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
+$ \cp -f Formula/poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
 
 $ brew tests
 $ brew install --build-from-source poac
