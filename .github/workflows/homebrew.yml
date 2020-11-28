@@ -5,11 +5,13 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: macOS-latest
+    strategy:
+      matrix:
+        formula: [ poac ]
     steps:
     - uses: actions/checkout@v1
     - run: brew update
-    - run: \cp -f poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
-    - run: brew install --build-from-source poac
-    - run: brew test poac
-    - run: brew audit --strict poac
-    - run: poac --version
+    - run: \cp -f Formula/${{ matrix.formula }}.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
+    - run: brew install --build-from-source ${{ matrix.formula }}
+    - run: brew test ${{ matrix.formula }}
+    #- run: brew audit --strict ${{ matrix.formula }}
