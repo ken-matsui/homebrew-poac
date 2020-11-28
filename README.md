@@ -2,10 +2,19 @@
 
 [![GitHub Actions Homebrew](https://github.com/poacpm/homebrew-tap/workflows/Homebrew/badge.svg?branch=master)](https://github.com/poacpm/homebrew-tap/actions?query=workflow%3A%22Homebrew%22)
 
-## Install
+## Install poac
 ```bash
-$ brew install poacpm/tap/poac
+$ brew tap poacpm/tap
+$ brew install poac
 $ poac --help
+```
+
+## Install toml11
+:warning: This formula is unofficial.
+
+```bash
+$ brew tap poacpm/tap
+$ brew install toml11
 ```
 
 ## Future
