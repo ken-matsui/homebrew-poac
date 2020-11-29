@@ -11,10 +11,22 @@ jobs:
     runs-on: macOS-latest
     strategy:
       matrix:
-        formula: [ clipp, poac, toml11 ]
+        formula: [ poac, toml11 ]
     steps:
     - uses: actions/checkout@v1
     - run: brew update
     - run: brew install --verbose --build-bottle Formula/${{ matrix.formula }}.rb
+    - run: brew test Formula/${{ matrix.formula }}.rb
+    #- run: brew audit --strict Formula/${{ matrix.formula }}.rb
+
+  head_only_formula:
+    runs-on: macOS-latest
+    strategy:
+      matrix:
+        formula: [ clipp ]
+    steps:
+    - uses: actions/checkout@v1
+    - run: brew update
+    - run: brew install --HEAD --verbose --build-bottle Formula/${{ matrix.formula }}.rb
     - run: brew test Formula/${{ matrix.formula }}.rb
     #- run: brew audit --strict Formula/${{ matrix.formula }}.rb
