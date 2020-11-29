@@ -1,7 +1,7 @@
 class Clipp < Formula
   desc "easy to use, powerful & expressive command line argument parsing for modern C++ / single header / usage & doc generation"
   homepage "https://github.com/muellan/clipp"
-  url "https://github.com/muellan/clipp.git", :tag => "v1.2.3"
+  head "https://github.com/muellan/clipp.git"
 
   depends_on "cmake" => :build
   depends_on "python@3.9" => :test
