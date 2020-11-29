@@ -4,7 +4,7 @@ class Clipp < Formula
   url "https://github.com/muellan/clipp.git", :tag => "v1.2.3"
 
   depends_on "cmake" => :build
-  depends_on "python@3.x" => :test
+  depends_on "python@3.9" => :test
 
   def install
     mkdir "bulid" do
