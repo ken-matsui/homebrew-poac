@@ -11,7 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - run: brew update
-    - run: \cp -f Formula/${{ matrix.formula }}.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
-    - run: brew install --build-from-source ${{ matrix.formula }}
-    - run: brew test ${{ matrix.formula }}
-    #- run: brew audit --strict ${{ matrix.formula }}
+    - run: brew install --verbose --build-bottle Formula/${{ matrix.formula }}.rb
+    - run: brew test Formula/${{ matrix.formula }}.rb
+    #- run: brew audit --strict Formula/${{ matrix.formula }}.rb
