@@ -14,7 +14,6 @@ class Clipp < Formula
   end
 
   test do
-    Dir.chdir('test')
-    system Formula["python@3.x"].opt_bin/"python3", "run_tests.py", "-c", ENV.cxx, "--clean"
+    system "false"
   end
 end
