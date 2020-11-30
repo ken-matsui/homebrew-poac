@@ -2,19 +2,15 @@
 
 [![GitHub Actions Homebrew](https://github.com/poacpm/homebrew-tap/workflows/Homebrew/badge.svg?branch=master)](https://github.com/poacpm/homebrew-tap/actions?query=workflow%3A%22Homebrew%22)
 
-## Install poac
+## Installation with tapping
 ```bash
 $ brew tap poacpm/tap
-$ brew install poac
-$ poac --help
+$ brew install (poac|toml11|clipp)
 ```
 
-## Install toml11
-:warning: This formula is unofficial.
-
+## Installation without executing tap command
 ```bash
-$ brew tap poacpm/tap
-$ brew install toml11
+$ brew install poacpm/tap/(poac|toml11|clipp)
 ```
 
 ## Future
