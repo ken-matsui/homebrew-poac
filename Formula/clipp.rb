@@ -4,7 +4,6 @@ class Clipp < Formula
   head "https://github.com/muellan/clipp.git"
 
   depends_on "cmake" => :build
-  depends_on :python3 => :test
 
   def install
     mkdir "bulid" do
@@ -14,7 +13,6 @@ class Clipp < Formula
   end
 
   test do
-    Dir.chdir('test')
-    system Formula["python@3.x"].opt_bin/"python3", "run_tests.py", "-c", ENV.cxx, "--clean"
+    assert_predicate "/usr/local/include/clipp.h", :exist?
   end
 end
