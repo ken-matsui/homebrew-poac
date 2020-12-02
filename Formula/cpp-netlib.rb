@@ -1,7 +1,7 @@
 class CppNetlib < Formula
   desc "The C++ Network Library Project -- cross-platform, standards compliant networking library."
   homepage "http://cpp-netlib.org"
-  url "https://github.com/cpp-netlib/cpp-netlib.git"
+  head "https://github.com/cpp-netlib/cpp-netlib.git"
 
   depends_on "cmake" => :build
   depends_on "boost"
