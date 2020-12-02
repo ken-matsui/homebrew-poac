@@ -23,7 +23,7 @@ jobs:
     runs-on: macOS-latest
     strategy:
       matrix:
-        formula: [ clipp ]
+        formula: [ clipp, cpp-netlib ]
     steps:
     - uses: actions/checkout@v1
     - run: brew update
