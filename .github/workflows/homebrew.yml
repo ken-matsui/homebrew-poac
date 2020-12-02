@@ -11,7 +11,7 @@ jobs:
     runs-on: macOS-latest
     strategy:
       matrix:
-        formula: [ poac, toml11 ]
+        formula: [ toml11 ]
     steps:
     - uses: actions/checkout@v1
     - run: brew update
@@ -23,7 +23,7 @@ jobs:
     runs-on: macOS-latest
     strategy:
       matrix:
-        formula: [ clipp, cpp-netlib ]
+        formula: [ clipp, cpp-netlib, poac ]
     steps:
     - uses: actions/checkout@v1
     - run: brew update
