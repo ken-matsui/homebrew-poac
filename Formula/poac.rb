@@ -8,6 +8,8 @@ class Poac < Formula
   depends_on "llvm" if MacOS.version <= :high_sierra
   depends_on :macos => :sierra
   depends_on "openssl"
+  depends_on "libgit2"
+  depends_on "fmt"
   depends_on "poacpm/tap/toml11"
   depends_on "poacpm/tap/clipp"
 
