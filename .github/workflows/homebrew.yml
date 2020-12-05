@@ -11,7 +11,7 @@ jobs:
     runs-on: macOS-latest
     strategy:
       matrix:
-        formula: [ toml11 ]
+        formula: [ plog, toml11 ]
     steps:
     - uses: actions/checkout@v1
     - run: brew update
