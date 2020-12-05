@@ -7,7 +7,7 @@ class Plog < Formula
 
   def install
     mkdir "bulid" do
-      system "cmake", "..", *std_cmake_args
+      system "cmake", "..", "-DPLOG_BUILD_SAMPLES=OFF", *std_cmake_args
       system "make", "install"
     end
   end
