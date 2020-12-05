@@ -23,7 +23,7 @@ jobs:
     runs-on: macOS-latest
     strategy:
       matrix:
-        formula: [ clipp, cpp-netlib, poac ]
+        formula: [ clipp, cpp-netlib, mitama-cpp-result, poac ]
     steps:
     - uses: actions/checkout@v1
     - run: brew update
