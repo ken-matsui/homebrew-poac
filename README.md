@@ -5,13 +5,17 @@
 ## Installation with tapping
 ```bash
 $ brew tap poacpm/tap
-$ brew install (poac|toml11|clipp)
+$ brew install $FORMULA
 ```
 
 ## Installation without executing tap command
 ```bash
-$ brew install poacpm/tap/(poac|toml11|clipp)
+$ brew install poacpm/tap/$FORMULA
 ```
+
+### Installable formulas
+
+You can check them [here](https://github.com/poacpm/homebrew-tap/tree/master/Formula).
 
 ## Future
 * `> 30 forks`
