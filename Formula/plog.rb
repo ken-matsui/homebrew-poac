@@ -15,7 +15,7 @@ class Plog < Formula
   test do
     (testpath/"test.cpp").write <<~EOS
       #include <plog/Log.h> // Step1: include the headers
-      #include <plog/Initializers/RollingFileInitializer.h>
+
       int main()
       {
           plog::init(plog::debug, "Hello.txt"); // Step2: initialize the logger
