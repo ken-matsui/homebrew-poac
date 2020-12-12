@@ -13,6 +13,7 @@ class Poac < Formula
   depends_on "poacpm/tap/toml11"
   depends_on "poacpm/tap/clipp"
   depends_on "poacpm/tap/mitama-cpp-result"
+  depends_on "poacpm/tap/plog"
 
   def install
     mkdir "bulid" do
