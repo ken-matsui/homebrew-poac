@@ -2,9 +2,9 @@ name: Homebrew
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   formula:
@@ -23,7 +23,7 @@ jobs:
     runs-on: macOS-latest
     strategy:
       matrix:
-        formula: [ clipp, cpp-netlib, mitama-cpp-result, poac ]
+        formula: [ clipp, mitama-cpp-result, poac ]
     steps:
     - uses: actions/checkout@v2.3.4
     - run: brew update

@@ -1,6 +1,6 @@
 # homebrew-tap
 
-[![GitHub Actions Homebrew](https://github.com/poacpm/homebrew-tap/workflows/Homebrew/badge.svg?branch=master)](https://github.com/poacpm/homebrew-tap/actions?query=workflow%3A%22Homebrew%22)
+[![GitHub Actions Homebrew](https://github.com/poacpm/homebrew-tap/workflows/Homebrew/badge.svg?branch=main)](https://github.com/poacpm/homebrew-tap/actions?query=workflow%3A%22Homebrew%22)
 
 ## Installation with tapping
 ```bash
@@ -15,7 +15,7 @@ $ brew install poacpm/tap/$FORMULA
 
 ### Installable formulas
 
-You can check them [here](https://github.com/poacpm/homebrew-tap/tree/master/Formula).
+You can check them [here](https://github.com/poacpm/homebrew-tap/tree/main/Formula).
 
 ## Future
 * `> 30 forks`
