@@ -10,6 +10,7 @@ jobs:
   formula:
     runs-on: macOS-latest
     strategy:
+      fail-fast: false
       matrix:
         formula: [ plog, toml11 ]
     steps:
@@ -22,6 +23,7 @@ jobs:
   head_only_formula:
     runs-on: macOS-latest
     strategy:
+      fail-fast: false
       matrix:
         formula: [ clipp, mitama-cpp-result, poac ]
     steps:
