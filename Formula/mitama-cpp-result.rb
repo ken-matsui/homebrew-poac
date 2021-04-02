@@ -1,7 +1,7 @@
 class MitamaCppResult < Formula
   desc "A Library that provides `result<T, E>` and `maybe<T>` and monadic functions for them."
   homepage "https://loligothick.github.io/mitama-cpp-result"
-  head "https://github.com/LoliGothick/mitama-cpp-result.git", :branch => "develop"
+  head "https://github.com/LoliGothick/mitama-cpp-result.git", :branch => "master"
 
   depends_on "cmake" => :build
 
