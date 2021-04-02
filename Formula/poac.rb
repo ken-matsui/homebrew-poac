@@ -1,7 +1,7 @@
 class Poac < Formula
   desc "Package manager for C++"
   homepage "https://github.com/poacpm"
-  head "https://github.com/poacpm/poac.git"
+  head "https://github.com/poacpm/poac.git", branch: "main"
 
   depends_on "cmake" => :build
   depends_on "boost"
