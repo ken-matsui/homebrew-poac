@@ -8,11 +8,6 @@ class Poac < Formula
   depends_on "openssl"
   depends_on "libarchive"
   depends_on "libgit2"
-  depends_on "fmt"
-  depends_on "poacpm/tap/toml11"
-  depends_on "poacpm/tap/clipp"
-  depends_on "poacpm/tap/mitama-cpp-result"
-  depends_on "poacpm/tap/plog"
 
   def install
     mkdir "bulid" do
