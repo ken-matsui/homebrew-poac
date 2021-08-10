@@ -2,13 +2,13 @@
 
 [![GitHub Actions Homebrew](https://github.com/poacpm/homebrew-tap/workflows/Homebrew/badge.svg?branch=main)](https://github.com/poacpm/homebrew-tap/actions?query=workflow%3A%22Homebrew%22)
 
-## Installation with tapping
+## Install by using tapping
 ```bash
 $ brew tap poacpm/tap
 $ brew install $FORMULA
 ```
 
-## Installation without executing tap command
+## Install without executing tap command
 ```bash
 $ brew install poacpm/tap/$FORMULA
 ```
@@ -31,7 +31,7 @@ Please refer to [this PR](https://github.com/Homebrew/homebrew-core/pull/31860) 
 ```bash
 $ git clone git@github.com:poacpm/homebrew-tap.git
 $ cd homebrew-tap
-#Invalidate ALIAS(alias cp='cp -i')
+# Invalidate an alias of 'cp -i' for cp command.
 $ \cp -f Formula/poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
 
 $ brew tests
