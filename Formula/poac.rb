@@ -7,7 +7,6 @@ class Poac < Formula
   depends_on "boost"
   depends_on "openssl"
   depends_on "libarchive"
-  depends_on "libgit2"
 
   def install
     mkdir "bulid" do
