@@ -8,7 +8,7 @@ on:
 
 jobs:
   formula:
-    runs-on: macOS-latest
+    runs-on: macos-11
     strategy:
       fail-fast: false
       matrix:
@@ -21,7 +21,7 @@ jobs:
     #- run: brew audit --strict Formula/${{ matrix.formula }}.rb
 
   head_only_formula:
-    runs-on: macOS-latest
+    runs-on: macos-11
     strategy:
       fail-fast: false
       matrix:
