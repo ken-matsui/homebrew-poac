@@ -14,7 +14,7 @@ jobs:
       matrix:
         formula: [ plog ]
     steps:
-    - uses: actions/checkout@v2.3.4
+    - uses: actions/checkout@v2.3.5
     - run: brew update
     - run: brew install --debug --verbose ./Formula/${{ matrix.formula }}.rb
     - run: brew test Formula/${{ matrix.formula }}.rb
@@ -27,7 +27,7 @@ jobs:
       matrix:
         formula: [ clipp, mitama-cpp-result, poac ]
     steps:
-    - uses: actions/checkout@v2.3.4
+    - uses: actions/checkout@v2.3.5
     - run: brew update
     - run: brew install --HEAD --debug --verbose ./Formula/${{ matrix.formula }}.rb
     #- run: brew test Formula/${{ matrix.formula }}.rb
