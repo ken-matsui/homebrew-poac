@@ -7,17 +7,17 @@ on:
     branches: [ main ]
 
 jobs:
-  formula:
-    runs-on: macos-11
-    strategy:
-      fail-fast: false
-      matrix:
-        formula: [ plog ]
-    steps:
-    - uses: actions/checkout@v3
-    - run: brew update
-    - run: brew install --debug --verbose ./Formula/${{ matrix.formula }}.rb
-    - run: brew test Formula/${{ matrix.formula }}.rb
+  # formula:
+    # runs-on: macos-11
+    # strategy:
+      # fail-fast: false
+      # matrix:
+        # formula: [ plog ]
+    # steps:
+    # - uses: actions/checkout@v3
+    # - run: brew update
+    # - run: brew install --debug --verbose ./Formula/${{ matrix.formula }}.rb
+    # - run: brew test Formula/${{ matrix.formula }}.rb
     #- run: brew audit --strict Formula/${{ matrix.formula }}.rb
 
   head_only_formula:
@@ -25,7 +25,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        formula: [ clipp, mitama-cpp-result, poac ]
+        formula: [ poac ]
     steps:
     - uses: actions/checkout@v3
     - run: brew update
