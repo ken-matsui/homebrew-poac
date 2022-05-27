@@ -11,7 +11,7 @@ class Poac < Formula
 
   def install
     mkdir "bulid" do
-      system "cmake", "..", *std_cmake_args
+      system "cmake", "..", "-G Ninja", *std_cmake_args
       system "ninja", "install"
     end
 
