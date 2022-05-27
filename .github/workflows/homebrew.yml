@@ -7,28 +7,29 @@ on:
     branches: [ main ]
 
 jobs:
-  # formula:
-    # runs-on: macos-11
-    # strategy:
-      # fail-fast: false
-      # matrix:
-        # formula: [ plog ]
-    # steps:
-    # - uses: actions/checkout@v3
-    # - run: brew update
-    # - run: brew install --debug --verbose ./Formula/${{ matrix.formula }}.rb
-    # - run: brew test Formula/${{ matrix.formula }}.rb
-    #- run: brew audit --strict Formula/${{ matrix.formula }}.rb
-
-  head_only_formula:
-    runs-on: macos-11
+  formula:
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
+        os: [ macos-11, macos-12 ]
         formula: [ poac ]
     steps:
     - uses: actions/checkout@v3
     - run: brew update
-    - run: brew install --HEAD --debug --verbose ./Formula/${{ matrix.formula }}.rb
+    - run: brew install --build-from-source --debug --verbose ./Formula/${{ matrix.formula }}.rb
+    - run: brew test Formula/${{ matrix.formula }}.rb
+    - run: brew audit --strict Formula/${{ matrix.formula }}.rb
+
+  # head_only_formula:
+    # runs-on: macos-11
+    # strategy:
+      # fail-fast: false
+      # matrix:
+        # formula: [ poac ]
+    # steps:
+    # - uses: actions/checkout@v3
+    # - run: brew update
+    # - run: brew install --HEAD --debug --verbose ./Formula/${{ matrix.formula }}.rb
     #- run: brew test Formula/${{ matrix.formula }}.rb
     #- run: brew audit --strict Formula/${{ matrix.formula }}.rb
