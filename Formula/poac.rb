@@ -5,6 +5,7 @@ class Poac < Formula
     tag:      "0.3.1",
     revision: "0afee72936c8c52ab2a477f0f14b45282bae83c1"
   license "Apache-2.0"
+  head "https://github.com/poacpm/poac.git", branch: "main"
 
   depends_on "cmake" => :build
   depends_on xcode: ["12.5", :build]
