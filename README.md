@@ -2,42 +2,29 @@
 
 [![GitHub Actions Homebrew](https://github.com/poacpm/homebrew-tap/workflows/Homebrew/badge.svg?branch=main)](https://github.com/poacpm/homebrew-tap/actions?query=workflow%3A%22Homebrew%22)
 
-## Install by using tapping
+## Installation using tap
+
 ```bash
 $ brew tap poacpm/tap
-$ brew install $FORMULA
+$ brew install poac
 ```
 
-## Install without executing tap command
+## Installation without tap
+
 ```bash
-$ brew install poacpm/tap/$FORMULA
+$ brew install poacpm/tap/poac
 ```
 
-### Installable formulas
+## Contribution
 
-You can check them [here](https://github.com/poacpm/homebrew-tap/tree/main/Formula).
-
-## Future
-* `> 30 forks`
-* `> 30 watchers`
-* `> 75 stars`
-
-When the above conditions are satisfied, tap becomes unnecessary.
-
-Please refer to [this PR](https://github.com/Homebrew/homebrew-core/pull/31860) for details.
-
-
-## Contribute
 ```bash
-$ git clone git@github.com:poacpm/homebrew-tap.git
+$ git clone https://github.com/poacpm/homebrew-tap.git
 $ cd homebrew-tap
-# Invalidate an alias of 'cp -i' for cp command.
-$ \cp -f Formula/poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
+$ cp -f Formula/poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
 
-$ brew tests
-$ brew install --build-from-source poac
+$ brew install --build-from-source --verbose --debug poac
 $ brew test poac
 $ brew audit --strict poac
 
-$ brew bump-formula-pr  # Update command
+$ brew bump-formula-pr poac --version=0.4.0
 ```
