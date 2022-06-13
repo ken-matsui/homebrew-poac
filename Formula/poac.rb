@@ -10,9 +10,9 @@ class Poac < Formula
   depends_on "cmake" => :build
   depends_on xcode: ["12.5", :build]
   depends_on "boost"
-  depends_on :macos
   depends_on "libarchive"
   depends_on "libgit2"
+  depends_on :macos
   depends_on "openssl@3"
 
   def install
