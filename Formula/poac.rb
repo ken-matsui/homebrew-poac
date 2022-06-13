@@ -9,8 +9,6 @@ class Poac < Formula
 
   depends_on "cmake" => :build
   depends_on "boost"
-  depends_on "libarchive"
-  depends_on "libgit2"
   depends_on macos: :big_sur # C++20
   depends_on "openssl@3"
 
@@ -21,7 +19,7 @@ class Poac < Formula
 
   def install
     mkdir "build" do
-      system "cmake", "..", "-DCPM_USE_LOCAL_PACKAGES=ON", *std_cmake_args
+      system "cmake", "..", *std_cmake_args
       system "make", "install"
     end
 
