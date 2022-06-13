@@ -2,8 +2,8 @@ class Poac < Formula
   desc "Package manager for C++"
   homepage "https://github.com/poacpm/poac"
   url "https://github.com/poacpm/poac.git",
-    tag:      "0.3.1",
-    revision: "0afee72936c8c52ab2a477f0f14b45282bae83c1"
+    tag:      "0.3.3",
+    revision: "788bbbe12e56be1bbd7204baf3c77ed8879499bf"
   license "Apache-2.0"
   head "https://github.com/poacpm/poac.git", branch: "main"
 
@@ -12,10 +12,12 @@ class Poac < Formula
   depends_on "boost"
   depends_on :macos
   depends_on "openssl@3"
+  depends_on "libarchive"
+  depends_on "libgit2"
 
   def install
     mkdir "build" do
-      system "cmake", "..", *std_cmake_args
+      system "cmake", "..", "-DCPM_USE_LOCAL_PACKAGES=ON", *std_cmake_args
       system "make", "install"
     end
 
