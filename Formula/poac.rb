@@ -3,7 +3,7 @@ class Poac < Formula
   homepage "https://github.com/poacpm/poac"
   url "https://github.com/poacpm/poac.git",
     tag:      "0.3.4",
-    revision: "c6220fa24d32b3361d24356550d3c25d31146152"
+    revision: "f905a175ccd1b9ad94041e1e0a29d12d92e8308d"
   license "Apache-2.0"
   head "https://github.com/poacpm/poac.git", branch: "main"
 
