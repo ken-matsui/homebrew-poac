@@ -2,8 +2,8 @@ class Poac < Formula
   desc "Package manager for C++"
   homepage "https://github.com/poacpm/poac"
   url "https://github.com/poacpm/poac.git",
-    tag:      "0.3.3",
-    revision: "788bbbe12e56be1bbd7204baf3c77ed8879499bf"
+    tag:      "0.3.4",
+    revision: "c6220fa24d32b3361d24356550d3c25d31146152"
   license "Apache-2.0"
   head "https://github.com/poacpm/poac.git", branch: "main"
 
