@@ -22,12 +22,19 @@ class Poac < Formula
   fails_with gcc: "5" # C++20
 
   def install
-    libgit2 = Formula["libgit2"]
-    system "cmake", "-B", "build",
-                    "-DCPM_USE_LOCAL_PACKAGES=ON",
-                    "-DPC_LIBGIT2_INCLUDEDIR=#{libgit2}/include",
-                    "-DPC_LIBGIT2_LIBDIR=#{libgit2}/lib",
-                    *std_cmake_args
+    # Use Homebrew-provided packages instead of downloading them.
+    args = std_cmake_args + %W[-DCPM_USE_LOCAL_PACKAGES=ON]
+
+    # On Linux, `find_package` cannot find libgit2 correctly.
+    on_linux do
+      libgit2 = Formula["libgit2"]
+      args += %W[
+        -DPC_LIBGIT2_INCLUDEDIR=#{libgit2}/include
+        -DPC_LIBGIT2_LIBDIR=#{libgit2}/lib
+      ]
+    end
+
+    system "cmake", "-B", "build", *args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
