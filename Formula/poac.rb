@@ -28,9 +28,11 @@ class Poac < Formula
     # On Linux, `find_package` cannot find libgit2 correctly.
     on_linux do
       libgit2 = Formula["libgit2"]
+      print "#{libgit2.opt_include}"
+      print "#{libgit2.opt_lib}"
       args += %W[
-        -DPC_LIBGIT2_INCLUDEDIR=#{libgit2}/include
-        -DPC_LIBGIT2_LIBDIR=#{libgit2}/lib
+        -DPC_LIBGIT2_INCLUDEDIR=#{libgit2.opt_include}
+        -DPC_LIBGIT2_LIBDIR=#{libgit2.opt_lib}
       ]
     end
 
