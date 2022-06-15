@@ -1,29 +1,31 @@
 class Poac < Formula
   desc "Package manager for C++"
   homepage "https://github.com/poacpm/poac"
-  url "https://github.com/poacpm/poac.git",
-    tag:      "0.3.4",
-    revision: "f905a175ccd1b9ad94041e1e0a29d12d92e8308d"
+  url "https://github.com/poacpm/poac/archive/refs/tags/0.3.5.tar.gz"
+  sha256 "0d131695e5b7b4d569a5aee6bdd9830fa4400a24b7d5642c95a2857007177da7"
   license "Apache-2.0"
   head "https://github.com/poacpm/poac.git", branch: "main"
 
   depends_on "cmake" => :build
   depends_on "boost"
+  depends_on "fmt"
   depends_on macos: :big_sur # C++20
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
+  depends_on "spdlog"
+
+  uses_from_macos "libarchive"
 
   on_linux do
     depends_on "gcc"
   end
-  fails_with gcc: "5"
+  fails_with gcc: "5" # C++20
 
   def install
-    mkdir "build" do
-      system "cmake", "..", *std_cmake_args
-      system "make", "install"
-    end
+    system "cmake", "-B", "build", "-DCPM_USE_LOCAL_PACKAGES=ON", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
 
-    man1.install Dir["src/etc/man/man1/*.1"]
+    man1.install (buildpath/"src/etc/man/man1").children
     bash_completion.install_symlink "src/etc/poac.bash" => "poac"
     zsh_completion.install_symlink "src/etc/poac.bash" => "_poac"
   end
