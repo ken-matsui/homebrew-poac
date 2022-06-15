@@ -23,10 +23,10 @@ class Poac < Formula
 
   def install
     # Use Homebrew-provided packages instead of downloading them.
-    args = std_cmake_args + %W[-DCPM_USE_LOCAL_PACKAGES=ON]
+    args = std_cmake_args + %w[-DCPM_USE_LOCAL_PACKAGES=ON]
 
     # On Linux, `find_package` cannot find libgit2 correctly.
-    on_linux do
+    if OS.linux?
       libgit2 = Formula["libgit2"]
       print "#{libgit2.opt_include}"
       print "#{libgit2.opt_lib}"
