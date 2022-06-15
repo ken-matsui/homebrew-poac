@@ -7,7 +7,6 @@ class Poac < Formula
   head "https://github.com/poacpm/poac.git", branch: "main"
 
   depends_on "cmake" => :build
-  depends_on "pkg-config" => :build # To find libgit2
   depends_on "boost"
   depends_on "fmt"
   depends_on "libgit2"
