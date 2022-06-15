@@ -22,10 +22,7 @@ class Poac < Formula
   fails_with gcc: "5" # C++20
 
   def install
-    # Use Homebrew-provided packages instead of downloading them.
-    args = std_cmake_args + %w[-DCPM_USE_LOCAL_PACKAGES=ON]
-
-    system "cmake", "-B", "build", "-DCMAKE_FIND_DEBUG_MODE=1", *args
+    system "cmake", "-B", "build", "-DCPM_USE_LOCAL_PACKAGES=ON", "-DCMAKE_FIND_DEBUG_MODE=1", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
