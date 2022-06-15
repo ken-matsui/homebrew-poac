@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: brew update
-    - run: brew install --HEAD --build-from-source --debug --verbose ./Formula/${{ matrix.formula }}.rb
+    - run: brew install --build-from-source --debug --verbose ./Formula/${{ matrix.formula }}.rb
     - run: brew test Formula/${{ matrix.formula }}.rb
     - run: brew audit --strict Formula/${{ matrix.formula }}.rb
 
