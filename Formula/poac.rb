@@ -9,6 +9,7 @@ class Poac < Formula
   depends_on "cmake" => :build
   depends_on "boost"
   depends_on "fmt"
+  depends_on "libgit2"
   depends_on macos: :big_sur # C++20
   depends_on "openssl@1.1"
   depends_on "spdlog"
@@ -21,7 +22,12 @@ class Poac < Formula
   fails_with gcc: "5" # C++20
 
   def install
-    system "cmake", "-B", "build", "-DCPM_USE_LOCAL_PACKAGES=ON", *std_cmake_args
+    libgit2 = Formula["libgit2"]
+    system "cmake", "-B", "build",
+                    "-DCPM_USE_LOCAL_PACKAGES=ON",
+                    "-DPC_LIBGIT2_INCLUDEDIR=#{libgit2}/include",
+                    "-DPC_LIBGIT2_LIBDIR=#{libgit2}/lib",
+                    *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
