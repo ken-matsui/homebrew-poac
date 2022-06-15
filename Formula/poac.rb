@@ -32,7 +32,7 @@ class Poac < Formula
       args += %W[-Dlibgit2_root=#{libgit2}]
     end
 
-    system "cmake", "-B", "build", "-DCPM_USE_LOCAL_PACKAGES=ON", "-DCMAKE_FIND_DEBUG_MODE=1", *std_cmake_args
+    system "cmake", "-B", "build", "-DCPM_USE_LOCAL_PACKAGES=ON", "-DCMAKE_FIND_DEBUG_MODE=1", *args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
