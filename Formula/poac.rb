@@ -28,7 +28,7 @@ class Poac < Formula
 
     # On Linux, `find_package` cannot find libgit2 correctly.
     if OS.linux?
-      args += %W[-Dlibgit2_ROOT=#{Formula["libgit2"]}]
+      args += %W[-Dlibgit2_ROOT=#{Formula["libgit2"].prefix}]
     end
 
     system "cmake", "-B", "build", "-DCMAKE_FIND_DEBUG_MODE=1", *args
