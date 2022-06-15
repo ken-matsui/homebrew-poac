@@ -29,8 +29,8 @@ class Poac < Formula
     if OS.linux?
       libgit2 = Formula["libgit2"]
       args += %W[
-        -DLIBGIT2_INCLUDE_DIR=#{libgit2.opt_include/git2}
-        -DLIBGIT2_LIBRARIES=#{libgit2.opt_lib/shared_library("libgit2")}
+        -DLIBGIT2_INCLUDE_DIR=#{libgit2.opt_include}
+        -DLIBGIT2_LIBRARIES=#{libgit2.opt_lib}
       ]
     end
 
