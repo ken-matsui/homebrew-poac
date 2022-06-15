@@ -31,7 +31,7 @@ class Poac < Formula
       args += %W[-Dlibgit2_ROOT=#{Formula["libgit2"]}]
     end
 
-    system "cmake", "-B", "build", *args
+    system "cmake", "-B", "build", "-DCMAKE_FIND_DEBUG_MODE=1", *args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
