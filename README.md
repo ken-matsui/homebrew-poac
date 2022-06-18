@@ -1,7 +1,7 @@
 # homebrew-poac
 
-:warning: The formula for Poac has been merged into [homebrew-core](https://github.com/Homebrew/homebrew-core/pull/103610).
-Please use it instead of this tap.
+:warning: This formula for Poac has been merged into [homebrew-core](https://github.com/Homebrew/homebrew-core/pull/103610).
+I strongly recommend installing Poac without using this tap.
 
 [![GitHub Actions Homebrew](https://github.com/ken-matsui/homebrew-poac/workflows/Homebrew/badge.svg?branch=main)](https://github.com/ken-matsui/homebrew-poac/actions?query=workflow%3A%22Homebrew%22)
 
