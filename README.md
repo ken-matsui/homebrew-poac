@@ -1,25 +1,28 @@
-# homebrew-tap
+# homebrew-poac
 
-[![GitHub Actions Homebrew](https://github.com/poacpm/homebrew-tap/workflows/Homebrew/badge.svg?branch=main)](https://github.com/poacpm/homebrew-tap/actions?query=workflow%3A%22Homebrew%22)
+:warning: The formula for Poac has been merged into [homebrew-core](https://github.com/Homebrew/homebrew-core/pull/103610).
+Please use it instead of this tap.
+
+[![GitHub Actions Homebrew](https://github.com/ken-matsui/homebrew-poac/workflows/Homebrew/badge.svg?branch=main)](https://github.com/ken-matsui/homebrew-poac/actions?query=workflow%3A%22Homebrew%22)
 
 ## Installation using tap
 
 ```bash
-$ brew tap poacpm/tap
+$ brew tap ken-matsui/poac
 $ brew install poac
 ```
 
 ## Installation without tap
 
 ```bash
-$ brew install poacpm/tap/poac
+$ brew install ken-matsui/poac/poac
 ```
 
 ## Contribution
 
 ```bash
-$ git clone https://github.com/poacpm/homebrew-tap.git
-$ cd homebrew-tap
+$ git clone https://github.com/ken-matsui/homebrew-poac.git
+$ cd homebrew-poac
 $ cp -f Formula/poac.rb $(brew --repo)/Library/Taps/homebrew/homebrew-core/Formula/
 
 $ brew install --build-from-source --verbose --debug poac
