@@ -13,11 +13,11 @@ class Poac < Formula
   depends_on "openssl@1.1"
   depends_on "spdlog"
 
+  uses_from_macos "libarchive"
+
   on_macos do
     depends_on "llvm" => [:build, :test] if DevelopmentTools.clang_build_version <= 1200
   end
-
-  uses_from_macos "libarchive"
 
   on_linux do
     depends_on "gcc"
